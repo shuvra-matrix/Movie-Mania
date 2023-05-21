@@ -216,3 +216,54 @@ body{
 }
 
 .search-btn:is(:hover, :focus-visible) {opacity: 1;}
+
+.popular-show{
+  justify-content: space-between;
+  width: 90%;
+  margin: 1rem auto;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.image{
+  margin-inline: 10px;
+  margin-block-end: 10px;
+  height: auto;
+  flex: 30%;
+}
+
+.image img{
+  width: 100%;
+}
+
+.popular-show p{
+  word-break: break-all;
+}
+
+@media(min-width: 601px){
+  .search-box{
+  position: absolute;
+  display: flex;
+  z-index: 0;
+  width: 50%;
+  right: 0;
+  top: 0;
+  left: auto;
+
+}
+.search-btn{
+  display: none;
+}
+.image{
+  flex: 15%;
+}
+
+
+}
+
+@media(min-width : 1080px ){
+  .search-box{
+    width: 40%;
+  }
+}
