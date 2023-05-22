@@ -26,10 +26,43 @@ $.ajax(settings).done(function (response) {
   console.log(response);
   response.forEach((res) => {
     if (res.title !== "Come and See") {
-      let titles = res.title.slice(0, 16) + "...";
       $(".popular-show").append(
-        `<div class="image"> <img src="${res.image}" alt="${res.title}"> <div class="title"><h3>${titles}</h3></div>  </div>`
+        `<div class="movie-section">
+        <img
+          class="movie-image"
+          src="${res.image}"
+          alt="${res.title}"
+        />
+        <h4 class="movie-title">${res.title}</h4>
+        <img
+          class="start"
+          src="./static/images/star.png"
+          alt=""
+          width="20px"
+          height="20px"
+        /> <span class="rating">${res.rating}</span>
+        <p class="year">${res.year}</p>
+      </div>`
       );
     }
   });
 });
+
+// for (let i = 0; i < 10; i++) {
+//   $(".popular-show").append(` <div class="movie-section">
+//         <img
+//           class="movie-image"
+//           src="https://m.media-amazon.com/images/M/MV5BMDgxOTdjMzYtZGQxMS00ZTAzLWI4Y2UtMTQzN2VlYjYyZWRiXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UX1000_.jpg"
+//           alt=""
+//         />
+//         <h4>guardians of galaxy vol 3 4k poster</h4>
+//         <img
+//           class="start"
+//           src="./static/images/star.png"
+//           alt=""
+//           width="20px"
+//           height="20px"
+//         />
+//         <p class="year">2023</p>
+//       </div>`);
+// }
