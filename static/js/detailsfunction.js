@@ -26,7 +26,7 @@ function details(movie, texts, search) {
       const settings = {
         async: true,
         crossDomain: true,
-        url: `https://streaming-availability.p.rapidapi.com/v2/search/title?title=${inputValue}&country=in&show_type=movie&output_language=en`,
+        url: `https://streaming-availability.p.rapidapi.com/v2/get/basic?country=in&imdb_id=${inputValue}&output_language=en`,
         method: "GET",
         headers: {
           "X-RapidAPI-Key":
@@ -37,7 +37,8 @@ function details(movie, texts, search) {
 
       $.ajax(settings).done(function (response) {
         console.log(response);
-        const movieList = response.result[0];
+        const movieList = response.result;
+        console.log(movieList);
         let cast = "";
         let dire = "";
         let genres = "";

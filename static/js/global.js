@@ -32,7 +32,7 @@ $.ajax(settings).done(function (response) {
         <img
           class="movie-image"
           src="${res.image}"
-          alt="${res.title}"
+          alt="${res.imdbid}"
         />
         <h4 class="movie-title">${res.title}</h4>
         <img

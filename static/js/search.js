@@ -28,6 +28,7 @@ inputButton.addEventListener("keypress", (e) => {
     $(".search-show").empty();
     $(".popular-show").empty();
     $.ajax(settings).done(function (response) {
+      console.log(response);
       $(".script").empty();
       response.result.forEach((res) => {
         $(".search-show").append(
@@ -35,7 +36,7 @@ inputButton.addEventListener("keypress", (e) => {
         <img
           class="movie-image"
           src="${res.posterURLs.original}"
-          alt="${res.title}"
+          alt="${res.imdbId}"
         />
         <h4 class="movie-title">${res.title}</h4>
         <img
