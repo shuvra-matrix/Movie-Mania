@@ -24,19 +24,8 @@ function details(movie, texts, search) {
       $(".details-page").empty();
       $(".logo-class").empty();
       $(".popular-show").empty();
-      const settings = {
-        async: true,
-        crossDomain: true,
-        url: `https://streaming-availability.p.rapidapi.com/v2/get/basic?country=in&imdb_id=${inputValue}&output_language=en`,
-        method: "GET",
-        headers: {
-          "X-RapidAPI-Key":
-            "560c4ba83emsh373aa6eae5f9a4cp1d9f47jsn945b444dcdb5",
-          "X-RapidAPI-Host": "streaming-availability.p.rapidapi.com",
-        },
-      };
 
-      $.ajax(settings).done(function (response) {
+      $.ajax(detailsPageApi(inputValue)).done(function (response) {
         console.log(response);
         const movieList = response.result;
         console.log(movieList);
@@ -55,6 +44,7 @@ function details(movie, texts, search) {
         movieList.genres.forEach((gen) => {
           genres += gen["name"] + ", ";
         });
+
         const stream = [];
         const streamPlartformLength = Object.keys(
           movieList.streamingInfo

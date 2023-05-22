@@ -12,19 +12,7 @@ for (tog of searchToggler) {
   });
 }
 
-const settings = {
-  async: true,
-  crossDomain: true,
-  url: "https://imdb-top-100-movies.p.rapidapi.com/",
-  method: "GET",
-  headers: {
-    "X-RapidAPI-Key": "53db47703bmsh43337a6ff98140ep1d9019jsnfa4b3f6ce92b",
-    "X-RapidAPI-Host": "imdb-top-100-movies.p.rapidapi.com",
-  },
-};
-
-$.ajax(settings).done(function (response) {
-  console.log(response);
+$.ajax(indexPage()).done(function (response) {
   response.forEach((res) => {
     if (res.title !== "Come and See") {
       $(".popular-show").append(

@@ -14,20 +14,11 @@ inputButton.addEventListener("keypress", (e) => {
       searchShow.classList.toggle("hidden");
     }
     const inputValue = inputButton.value;
-    const settings = {
-      async: true,
-      crossDomain: true,
-      url: `https://streaming-availability.p.rapidapi.com/v2/search/title?title=${inputValue}&country=in&show_type=movie&output_language=en`,
-      method: "GET",
-      headers: {
-        "X-RapidAPI-Key": "560c4ba83emsh373aa6eae5f9a4cp1d9f47jsn945b444dcdb5",
-        "X-RapidAPI-Host": "streaming-availability.p.rapidapi.com",
-      },
-    };
+
     resultFor.textContent = "Results";
     $(".search-show").empty();
     $(".popular-show").empty();
-    $.ajax(settings).done(function (response) {
+    $.ajax(searchPageApi(inputValue)).done(function (response) {
       console.log(response);
       $(".script").empty();
 
