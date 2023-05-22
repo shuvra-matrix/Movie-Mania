@@ -30,9 +30,12 @@ inputButton.addEventListener("keypress", (e) => {
     $.ajax(settings).done(function (response) {
       console.log(response);
       $(".script").empty();
+
       response.result.forEach((res) => {
-        $(".search-show").append(
-          `<div class="movie-section">
+        const streamPlartformLength = Object.keys(res.streamingInfo).length;
+        if (streamPlartformLength > 0) {
+          $(".search-show").append(
+            `<div class="movie-section">
         <img
           class="movie-image"
           src="${res.posterURLs.original}"
@@ -48,8 +51,10 @@ inputButton.addEventListener("keypress", (e) => {
         /> <span class="rating">${res.imdbRating / 10}</span>
         <p class="year">${res.year}</p>
       </div>`
-        );
+          );
+        }
       });
+
       let movieSections = document.querySelectorAll(".movie-section");
       const texts = document.querySelector(".text");
       const searchPages = document.querySelector(".search-show");

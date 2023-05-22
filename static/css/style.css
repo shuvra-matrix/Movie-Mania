@@ -381,11 +381,13 @@ position: absolute;
   padding: 1rem;
   width: 100%;
   text-align: justify;
+  color: var(--text-color);
 }
 
 .cast-name ,
 .dir-name {
   word-break: break-all;
+  
 }
 
 .trailer p {
@@ -469,7 +471,7 @@ width: 80%;
 }
 
 .movie-image img{
-  width: 100%;
+  width: 70%;
   height: 500px;
 
 }
@@ -496,21 +498,46 @@ width: 80%;
 
 
 .trailer iframe{
-  width: 900px;
+  width: 95%;
   height: 600px;
   padding: 1rem;
 
 }
 
+}
+
+@media(min-width : 862px ){
+  
+  .movie-image img{
+  width: 100%;
 
 
 }
-
-
 
 @media(min-width : 1080px ){
   .search-box{
     width: 40%;
   }
+  .movie-image img{
+  width: 100%;
+  height: 500px;
+
 }
+}
+
+@media(min-width : 1540px ){
+  
+  .movie-image img{
+  width: 100%;
+
+
+}
+
+.trailer iframe{
+  width: 900px;
+  height: 600px;
+}
+
+}
+
 

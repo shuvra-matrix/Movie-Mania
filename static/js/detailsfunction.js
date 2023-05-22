@@ -11,6 +11,7 @@ function details(movie, texts, search) {
     netflix: "./static/images/netflix.png",
     apple: "./static/images/appletv.png",
     hotstar: "./static/images/hotstart.webp",
+    zee5: "./static/images/zee5.jpeg",
   };
 
   movieSection.forEach((movies) => {
@@ -55,16 +56,18 @@ function details(movie, texts, search) {
           genres += gen["name"] + ", ";
         });
         const stream = [];
-        const streamPlartform = Object.keys(movieList.streamingInfo.in);
-        streamPlartform.forEach((s) => {
-          stream.push(
-            `<a href="${movieList.streamingInfo.in[s][0].link}"><img src="${logoDir[s]}" alt=""/></a>`
-          );
-        });
+        const streamPlartformLength = Object.keys(
+          movieList.streamingInfo
+        ).length;
+        if (streamPlartformLength > 0) {
+          const streamPlartform = Object.keys(movieList.streamingInfo.in);
+          streamPlartform.forEach((s) => {
+            stream.push(
+              `<a href="${movieList.streamingInfo.in[s][0].link}"><img src="${logoDir[s]}" alt=""/></a>`
+            );
+          });
 
-        console.log(stream);
-
-        $(".details-page").append(`
+          $(".details-page").append(`
       
 
               <div class="movie-image">
@@ -121,6 +124,10 @@ function details(movie, texts, search) {
       
       
       `);
+        } else {
+          $(".details-page").append(` <div class="movie-titles">
+            <p class="movie-title-sub">Not Available In India</p>`);
+        }
         detailsPage.style.display = "flex";
         stream.forEach((s) => {
           $(".logo-class").append(s);
