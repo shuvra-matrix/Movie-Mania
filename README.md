@@ -12,5 +12,5 @@ Web App link:
 <br>
 <img style="width: 100% ; height:100% ; " src="https://github.com/shuvra-matrix/Movie-Mania/blob/master/static/showImage/Screenshot%202023-05-23%20050112.png?raw=true" >
 <br>
-<img style="width: 100% ; height:100% ; " src="https://github.com/shuvra-matrix/Movie-Mania/blob/master/static/showImage/Screenshot%202023-05-23%20050346.png?raw=true" >
+<img style="width: 30% ; height:100% ; " src="https://github.com/shuvra-matrix/Movie-Mania/blob/master/static/showImage/Screenshot%202023-05-23%20050346.png?raw=true" >
 <br>
