@@ -1,4 +1,7 @@
 function details(movie, texts, search) {
+  const detailsPage = document.querySelector(".details-page");
+  detailsPage.style.display = "flex";
+
   let movieSection = movie;
   const text = texts;
   const searchPage = search;
@@ -27,7 +30,7 @@ function details(movie, texts, search) {
         method: "GET",
         headers: {
           "X-RapidAPI-Key":
-            "53db47703bmsh43337a6ff98140ep1d9019jsnfa4b3f6ce92b",
+            "560c4ba83emsh373aa6eae5f9a4cp1d9f47jsn945b444dcdb5",
           "X-RapidAPI-Host": "streaming-availability.p.rapidapi.com",
         },
       };
@@ -117,6 +120,7 @@ function details(movie, texts, search) {
       
       
       `);
+        detailsPage.style.display = "flex";
         stream.forEach((s) => {
           $(".logo-class").append(s);
         });

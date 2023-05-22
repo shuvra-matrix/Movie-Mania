@@ -2,12 +2,17 @@
 
 const inputButton = document.querySelector(".search-field");
 const popularShow = document.querySelector(".popular-show");
+const searchShow = document.querySelector(".search-show");
 const resultFor = document.querySelector(".text-sub");
+
 $(".script").empty();
+
 inputButton.addEventListener("keypress", (e) => {
   if (e.code == "Enter") {
     popularShow.classList.add("hidden");
-
+    if (searchShow.classList.contains("hidden")) {
+      searchShow.classList.toggle("hidden");
+    }
     const inputValue = inputButton.value;
     const settings = {
       async: true,
@@ -15,7 +20,7 @@ inputButton.addEventListener("keypress", (e) => {
       url: `https://streaming-availability.p.rapidapi.com/v2/search/title?title=${inputValue}&country=in&show_type=movie&output_language=en`,
       method: "GET",
       headers: {
-        "X-RapidAPI-Key": "53db47703bmsh43337a6ff98140ep1d9019jsnfa4b3f6ce92b",
+        "X-RapidAPI-Key": "560c4ba83emsh373aa6eae5f9a4cp1d9f47jsn945b444dcdb5",
         "X-RapidAPI-Host": "streaming-availability.p.rapidapi.com",
       },
     };
@@ -23,6 +28,7 @@ inputButton.addEventListener("keypress", (e) => {
     $(".search-show").empty();
     $(".popular-show").empty();
     $.ajax(settings).done(function (response) {
+      $(".script").empty();
       response.result.forEach((res) => {
         $(".search-show").append(
           `<div class="movie-section">
@@ -43,9 +49,13 @@ inputButton.addEventListener("keypress", (e) => {
       </div>`
         );
       });
-      $(".script").append(
-        `<script src="./static/js/searchdetails.js"></script>`
-      );
+      let movieSections = document.querySelectorAll(".movie-section");
+      const texts = document.querySelector(".text");
+      const searchPages = document.querySelector(".search-show");
+
+      details(movieSections, texts, searchPages);
+      detailsPage.style.display = "none";
+      $(".details-page").empty();
     });
   }
 });
