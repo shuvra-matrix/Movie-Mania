@@ -8,5 +8,5 @@ Web App link:
 <h4>Here some demo iamges.
 </h4>
 <br>
-<img style="width: 700px ; height:20% ; " src="https://github.com/shuvra-matrix/HEART_DISEASE_PREDICTION/blob/master/static/images/no1.png?raw=true" >
+<img style="width: 100% ; height:80% ; " src="https://github.com/shuvra-matrix/Movie-Mania/blob/master/static/showImage/Screenshot%202023-05-23%20050112.png?raw=true" >
 <br>
