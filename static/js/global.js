@@ -53,7 +53,7 @@ for (let i = 0; i < 10; i++) {
         <img
           class="movie-image"
           src="https://m.media-amazon.com/images/M/MV5BMDgxOTdjMzYtZGQxMS00ZTAzLWI4Y2UtMTQzN2VlYjYyZWRiXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UX1000_.jpg"
-          alt=""
+          alt="rrr"
         />
         <h4>guardians of galaxy vol 3 4k poster</h4>
         <img

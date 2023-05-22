@@ -292,6 +292,133 @@ body{
   display: none;
 }
 
+
+/* details page */
+
+.main-section{
+  padding-top: 2rem;
+}
+
+.details-page{
+ overflow-wrap: break-word; 
+padding: 1rem;
+width: 95%;
+margin:auto;
+ display: flex;
+ justify-content: center;
+ flex-flow: row wrap;
+ gap: 20px;
+ background-color: var(--background);
+ box-shadow: var(--shadow-1);
+ border-radius: var(--radius-8);
+}
+
+.movie-image{
+  flex: 20%;
+}
+
+.movie-other-details{
+  width: 98%;
+}
+
+.movie-image img{
+  width: 70%;
+  height: 450px;
+  border-radius: var(--radius-8);
+  box-shadow: var(--shadow-1);
+  padding-top: 1rem;
+}
+
+.movie-titles{
+  position: relative;
+}
+
+
+.movie-title-sub{
+  font-size: 1.9rem;
+  font-weight: 600;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+
+}
+
+.movie-rating{
+  position: absolute;
+  bottom: 0;
+  left: 45px;
+}
+.runtime{
+position: absolute;
+  bottom: 0;
+  left: 90px;
+}
+.movie-year{
+  position: absolute;
+  bottom: 0;
+  left: 150px;
+}
+
+.movie-geners{
+  padding: 1rem;
+}
+.movie-geners p{
+  color: var(--text-color);
+}
+
+.movie-overview{
+  padding: 1rem;
+}
+
+.movie-overview p{
+  font-size: 2rem;
+  text-align: justify;
+}
+
+
+.actor-class , .dir-class{
+  display: flex;
+  gap: 10px;
+  padding: 1rem;
+  width: 100%;
+  text-align: justify;
+}
+
+.cast-name ,
+.dir-name {
+  word-break: break-all;
+}
+
+.trailer p {
+  padding: 1rem;
+  font-size: 3rem;
+}
+
+.trailer iframe{
+  width: 100%;
+  height: 400px;
+  padding: 1rem;
+
+}
+
+
+.watch-on p{
+  font-size: 3rem;
+  font-weight: 600;
+  padding: 1rem;
+}
+
+.logo-class{
+  padding: 1rem;
+  display: flex;
+  gap: 10px;
+}
+
+.logo-class img{
+  width: 50px;
+  height: 50px;
+  border-radius: var(--radius-8);
+}
+
 @media(min-width: 601px){
   .search-box{
   position: absolute;
@@ -316,11 +443,74 @@ body{
 }
 
 
+}
+
+
+@media(min-width:842px){
+  
+
+.main-section{
+  padding-top: 2rem;
+}
+
+.details-page{
+padding: 4rem;
+width: 80%;
+ gap: 20px;
 
 }
+
+.movie-image{
+  flex: 20%;
+}
+
+.movie-other-details{
+  flex: 50%;
+}
+
+.movie-image img{
+  width: 100%;
+  height: 500px;
+
+}
+
+.movie-title{
+  position: relative;
+}
+
+.movie-title-sub{
+  font-size: 3rem;
+  font-weight: 600;
+  padding: 1rem;
+}
+
+
+.actor-class , .dir-class{
+  display: flex;
+  gap: 10px;
+  padding: 1rem;
+  width: 60%;
+  text-align: justify;
+}
+
+
+
+.trailer iframe{
+  width: 500px;
+  height: 300px;
+  padding: 1rem;
+
+}
+
+
+
+}
+
+
 
 @media(min-width : 1080px ){
   .search-box{
     width: 40%;
   }
 }
+

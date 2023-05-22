@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./static/css/style.css" />
+    <title>Movie Maintenance</title>
+  </head>
+  <body>
+    <header class="header">
+      <a href="./index.html" class="logo">
+        <img
+          src="./static/images/logo.svg"
+          alt="movie maina"
+          width="140"
+          height="32"
+        />
+      </a>
+      <div class="search-box" search-box>
+        <div class="search-wrapper searching" search-wrapper>
+          <input
+            type="text"
+            name="search"
+            aria-label="search movies"
+            placeholder="Search for any movies"
+            class="search-field"
+            autocomplete="off"
+            search-field
+          />
+          <img
+            src="./static/images/search.png"
+            alt="search"
+            width="24"
+            height="24"
+            class="leading-icon"
+          />
+        </div>
+        <button class="search-btn" search-toggler>
+          <img
+            src="./static/images/close.png"
+            alt="close"
+            width="24"
+            height="24"
+          />
+        </button>
+      </div>
+      <button class="search-btn" search-toggler menu-close>
+        <img
+          src="./static/images/search.png"
+          alt="open search"
+          width="24"
+          height="24"
+        />
+      </button>
+    </header>
+    <div class="main-section">
+      <div class="details-page">
+        <div class="movie-image">
+          <img
+            src="https://m.media-amazon.com/images/M/MV5BMDgxOTdjMzYtZGQxMS00ZTAzLWI4Y2UtMTQzN2VlYjYyZWRiXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UX1000_.jpg"
+            alt=""
+          />
+        </div>
+        <div class="movie-other-details">
+          <div class="movie-titles">
+            <p class="movie-title-sub">Lorem ipsum, doloIncidunt quafsdfsf</p>
+            <img class="movie-start" src="./static/images/star.png" alt="" />
+            <p class="movie-rating">7.8</p>
+            <p class="runtime">120m</p>
+            <p class="movie-year">2023</p>
+          </div>
+          <div class="movie-geners"><p>action , adventure</p></div>
+          <div class="movie-overview">
+            <p>
+              Batman must face his most ruthless nemesis when a deformed madman
+              calling himself "The Joker" seizes control of Gotham's criminal
+              underworld.
+            </p>
+          </div>
+          <div class="actor-class">
+            <div class="cast"><p>Cast</p></div>
+            <div class="cast-name">
+              <p>
+                adasdasd,dasdasdasd,dasdasdasd,dasdadas,dasdadadasdasda,dasdadasdasdadad,adadadad
+              </p>
+            </div>
+          </div>
+          <div class="dir-class">
+            <div class="dir"><p>Director</p></div>
+            <div class="dir-name">
+              <p>dasdadadasdasda,dasdadasdasdadad,adadadad</p>
+            </div>
+          </div>
+
+          <div class="watch-on">
+            <p>Watch Now On</p>
+            <div class="logo-class">
+              <a href="">
+                <img src="./static/images/amazon-prime.jpg" alt=""
+              /></a>
+              <a href=""> <img src="./static/images/netflix.png" alt="" /></a>
+              <a href=""><img src="./static/images/appletv.png" alt="" /></a>
+              <a href=""> <img src="./static/images/hotstart.webp" alt="" /></a>
+            </div>
+          </div>
+          <div class="trailer">
+            <p class="trailer-text">Trailer</p>
+            <iframe
+              src="https://www.youtube.com/embed/ftNOhfNjXjk"
+              frameborder="0"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.6.2.min.js"
+      integrity="sha256-2krYZKh//PcchRtd+H+VyyQoZ/e3EcrkxhM8ycwASPA="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./static/js/search.js"></script>
+    <script src="./static/js/details.js"></script>
+  </body>
+</html>
