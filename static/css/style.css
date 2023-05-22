@@ -220,13 +220,6 @@ body{
 
 /* home section */
 
-
-
-
-
-
-
-
 .main-section{
   width: 100%;
   min-height: 90vw;
@@ -235,7 +228,7 @@ body{
   background-color: var(--surface);
 }
 
-.popular-show{
+.popular-show , .search-show{
   padding: 2rem;
   width: 100%;
   margin: auto;
@@ -294,6 +287,11 @@ body{
   left: 30px;
 }
 
+
+.hidden{
+  display: none;
+}
+
 @media(min-width: 601px){
   .search-box{
   position: absolute;
@@ -312,7 +310,7 @@ body{
   flex: 15%;
 }
 
-.popular-show{
+.popular-show , .search-show{
   grid-template-columns: repeat(auto-fill, minmax(180px ,1fr));
 
 }
