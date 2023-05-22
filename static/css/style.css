@@ -239,7 +239,7 @@ body{
   position: relative;
 }
 
-.movie-section{
+.movie-section,.movie-sections{
    box-shadow: var(--shadow-1);
    border-radius: var(--radius-8);
    position: relative;
@@ -496,8 +496,8 @@ width: 80%;
 
 
 .trailer iframe{
-  width: 500px;
-  height: 300px;
+  width: 900px;
+  height: 600px;
   padding: 1rem;
 
 }

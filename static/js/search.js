@@ -3,9 +3,11 @@
 const inputButton = document.querySelector(".search-field");
 const popularShow = document.querySelector(".popular-show");
 const resultFor = document.querySelector(".text-sub");
+$(".script").empty();
 inputButton.addEventListener("keypress", (e) => {
   if (e.code == "Enter") {
     popularShow.classList.add("hidden");
+
     const inputValue = inputButton.value;
     const settings = {
       async: true,
@@ -19,11 +21,9 @@ inputButton.addEventListener("keypress", (e) => {
     };
     resultFor.textContent = "Results";
     $(".search-show").empty();
+    $(".popular-show").empty();
     $.ajax(settings).done(function (response) {
-      console.log(response);
       response.result.forEach((res) => {
-        console.log(res);
-
         $(".search-show").append(
           `<div class="movie-section">
         <img
@@ -43,6 +43,9 @@ inputButton.addEventListener("keypress", (e) => {
       </div>`
         );
       });
+      $(".script").append(
+        `<script src="./static/js/searchdetails.js"></script>`
+      );
     });
   }
 });
