@@ -8,7 +8,7 @@ const resultFor = document.querySelector(".text-sub");
 $(".script").empty();
 
 inputButton.addEventListener("keypress", (e) => {
-  if (e.code == "Enter") {
+  if (e.key == "Enter") {
     popularShow.classList.add("hidden");
     if (searchShow.classList.contains("hidden")) {
       searchShow.classList.toggle("hidden");
