@@ -14,12 +14,14 @@ for (tog of searchToggler) {
 
 $.ajax(indexPage()).done(function (response) {
   response.forEach((res) => {
+    console.log(res);
+
     if (res.title !== "Come and See") {
       $(".popular-show").append(
         `<div class="movie-section">
         <img
           class="movie-image"
-          src="${res.image}"
+          src="${res.image[1][1]}"
           alt="${res.imdbid}"
         />
         <h4 class="movie-title">${res.title}</h4>

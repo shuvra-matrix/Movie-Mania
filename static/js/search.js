@@ -23,6 +23,7 @@ inputButton.addEventListener("keypress", (e) => {
       $(".script").empty();
 
       response.result.forEach((res) => {
+        console.log(res);
         const streamPlartformLength = Object.keys(res.streamingInfo).length;
         if (streamPlartformLength > 0) {
           $(".search-show").append(
